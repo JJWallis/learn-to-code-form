@@ -1,11 +1,11 @@
-// Challenge - create error div's in JS alone 
-// exclamation symbol - appendChild() on input el - build + style in JS 
-// To do - regular expression to validate email format 
+// Exclamation symbol - position in relation to <fieldset>
+// Regular expression to validate email format 
 
 
 'use strict'
 
 const form = document.querySelector('.form')
+const fieldset = document.querySelector('.fieldset');
 const firstName = document.querySelector('#first-name')
 const lastName = document.querySelector('#last-name')
 const email = document.querySelector('#email')
@@ -30,6 +30,13 @@ form.addEventListener('submit', (e) => {
         
     for (let i = 0; i < errorsArr.length; i++) {
         let nextSibling = errorsArr[i].nextElementSibling
+        if (!errorsArr[i].previousElementSibling) {
+            let errorIcon = document.createElement('img');
+            errorIcon.src = '/images/icon-error.svg'
+            errorIcon.alt = 'Red error icon'
+            errorIcon.className = 'error-icon'
+            fieldset.insertBefore(errorIcon,errorsArr[i])
+        }
         nextSibling.classList.remove('hidden')
         errorsArr[i].classList.add('error')
     }
