@@ -75,7 +75,7 @@ body {
   margin-top: 0.9em;
 }
 
-.error {
+.errorMsg {
   display: flex;
   flex-direction: row-reverse;
   margin-top: 0.2em;
@@ -142,6 +142,14 @@ a:hover {
   text-decoration: underline;
 }
 
+.error {
+  border: 3px solid #ff7a7a;
+}
+
+.error::placeholder {
+  color: #ff7a7a;
+}
+
 /* /////////MEDIA QUERIES //////*/
 
 @media (min-width: 575px) and (max-width: 690px) {
@@ -179,6 +187,7 @@ a:hover {
   .title {
     width: 90%;
     font-size: 3em;
+    line-height: 1.1em;
   }
 
   .description {
