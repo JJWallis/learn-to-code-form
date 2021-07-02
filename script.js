@@ -1,6 +1,6 @@
 // Challenge - create error div's in JS alone 
-// Empty num var - each time error occurs + 1 to it | check at end - if greater than 0 = prevent reload (+ reset to 0 - at beginning of code)
-// Empty array - after validation error input el itself pushed to it + use that to check length for if errors present | loop through array + append repetitive styling via toggle class in CSS (border colour, exclamation symbol - appendChild() on input el - build + style in JS, show next element sibling, custom placeholder txt)| remove error styling for refresh next time? 
+// exclamation symbol - appendChild() on input el - build + style in JS 
+// To do - regular expression to validate email format 
 
 
 'use strict'
@@ -17,20 +17,21 @@ form.addEventListener('submit', (e) => {
 
     for (let i = 0; i < inputsArr.length; i++) {
         if (inputsArr[i].value === '' || inputsArr[i].value === null) {
+            if (inputsArr[i].type === 'email') {
+                email.placeholder = 'Email@example.com'
+            }
             errorsArr.push(inputsArr[i])
+        } else {
+            let nextSibling = inputsArr[i].nextElementSibling
+            nextSibling.classList.add('hidden')
+            inputsArr[i].classList.remove('error')
         }
     } 
-
-    if (errorsArr.includes(email)) {
-        email.placeholder = 'Email@example.com'
-    } else {
-        email.placeholder = 'Email address'
-    }
         
     for (let i = 0; i < errorsArr.length; i++) {
         let nextSibling = errorsArr[i].nextElementSibling
-        nextSibling.classList.toggle('hidden')
-        errorsArr[i].classList.toggle('error')
+        nextSibling.classList.remove('hidden')
+        errorsArr[i].classList.add('error')
     }
     
     if (errorsArr.length > 0) {

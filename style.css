@@ -48,6 +48,14 @@ body {
   line-height: 1.6em;
 }
 
+.btn {
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
 .btn-bg-purp {
   width: 100%;
   margin-bottom: 20px;
@@ -73,6 +81,10 @@ body {
 
 .input:not(:first-child) {
   margin-top: 0.9em;
+}
+
+.input:focus {
+  border: 2px solid#3e3c49;
 }
 
 .errorMsg {
@@ -106,16 +118,6 @@ a {
   text-decoration: none;
   color: #f5818a;
   font-weight: bold;
-}
-
-/*//////// REPETITIVE STYLES ////////*/
-
-.btn {
-  padding: 1em;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
 }
 
 /*////// ELEMENT STATE STYLES //////*/
