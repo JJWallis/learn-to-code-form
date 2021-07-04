@@ -1,18 +1,19 @@
-// Exclamation symbol - position in relation to <fieldset>
-// Regular expression to validate email format 
-
+// 1. Re-factor 
+// 2. Exclamation symbol - position in relation to <fieldset> 
+// 3. Build on string validation - search 
+// 4. Regular expressions 
 
 'use strict'
 
 const form = document.querySelector('.form')
-const fieldset = document.querySelector('.fieldset');
+const fieldset = document.querySelector('.fieldset')
 const firstName = document.querySelector('#first-name')
 const lastName = document.querySelector('#last-name')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 
 form.addEventListener('submit', (e) => {
-    let inputsArr = [firstName, lastName, email, password]
+    let inputsArr = document.querySelectorAll('input')
     let errorsArr = []
 
     for (let i = 0; i < inputsArr.length; i++) {
