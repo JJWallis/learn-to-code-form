@@ -1,4 +1,3 @@
-// 2. Exclamation symbol - position in relation to <fieldset> 
 // 3. Build on string validation - search 
 // 4. Regular expressions 
 // 5. Babel
@@ -28,8 +27,6 @@ form.addEventListener('submit', (e) => {
         
     for (let i = 0; i < errorsArr.length; i++) {
         let nextSibling = errorsArr[i].nextElementSibling
-        console.log(nextSibling.lastChild);
-
         if (nextSibling.lastChild.className !== 'error-icon') {
             let errorIcon = document.createElement('img')
             errorIcon.src = '/images/icon-error.svg'
@@ -37,15 +34,13 @@ form.addEventListener('submit', (e) => {
             errorIcon.className = 'error-icon'
             nextSibling.appendChild(errorIcon)
         }
-        
         if (errorsArr[i].type === 'email') {
             email.placeholder = 'Email@example.com'
         }
         nextSibling.classList.remove('hidden')
         errorsArr[i].classList.add('error')
     }
-    
-    if (errorsArr.length > 0) {
-      e.preventDefault()
-    }
+        if (errorsArr.length > 0) {
+            e.preventDefault()
+        }
 })
