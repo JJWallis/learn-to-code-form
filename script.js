@@ -1,6 +1,5 @@
 // 1. Regular expressions 
 // 2. Babel 
-// 3. Error msg on submit 
 
 'use strict'
 
