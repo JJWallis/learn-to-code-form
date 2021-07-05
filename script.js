@@ -1,5 +1,6 @@
-// 1. Regular expressions 
-// 2. Babel 
+// 1. Solution Comparison 
+// 2. Regular expressions 
+// 3. Babel 
 
 'use strict'
 

@@ -10,8 +10,8 @@
     <div class="results"></div>
     <script>
         const results = document.querySelector('.results')
-        new URLSearchParams(window.location.search).forEach((v) => {
-            results.append(`${v}`)
+        new URLSearchParams(window.location.search).forEach((n, v) => {
+            results.append(`${v}: ${n}`)
             results.append(document.createElement('br'))
         })
     </script>
