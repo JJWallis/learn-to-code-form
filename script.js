@@ -28,12 +28,14 @@ form.addEventListener('submit', (e) => {
         
     for (let i = 0; i < errorsArr.length; i++) {
         let nextSibling = errorsArr[i].nextElementSibling
-        if (!errorsArr[i].previousElementSibling) {
-            let errorIcon = document.createElement('img');
+        console.log(nextSibling.lastChild);
+
+        if (nextSibling.lastChild.className !== 'error-icon') {
+            let errorIcon = document.createElement('img')
             errorIcon.src = '/images/icon-error.svg'
             errorIcon.alt = 'Red error icon'
             errorIcon.className = 'error-icon'
-            fieldset.insertBefore(errorIcon,errorsArr[i])
+            nextSibling.appendChild(errorIcon)
         }
         
         if (errorsArr[i].type === 'email') {
