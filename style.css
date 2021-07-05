@@ -211,6 +211,7 @@ a:hover {
 
 @media (min-width: 850px) {
   .wrapper {
+    width: 95%;
     max-width: 1000px;
     flex-direction: row;
   }

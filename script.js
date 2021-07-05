@@ -16,14 +16,19 @@ form.addEventListener('submit', (e) => {
     let errorsArr = []
 
     for (let i = 0; i < inputs.length; i++) {
+        let passwordNextElementSibling = password.nextElementSibling
         if (inputs[i].value === '' || inputs[i].value === null) {
+            passwordNextElementSibling.textContent = 'Password cannot be empty'
             errorsArr.push(inputs[i])
+        } else if (password.value.toLowerCase() === 'password') {
+            passwordNextElementSibling.textContent = 'Password cannot be password'
+            errorsArr.push(password)
         } else {
             let nextSibling = inputs[i].nextElementSibling
             nextSibling.classList.add('hidden')
             inputs[i].classList.remove('error')
         }
-    } 
+    }
         
     for (let i = 0; i < errorsArr.length; i++) {
         let nextSibling = errorsArr[i].nextElementSibling
