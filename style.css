@@ -127,6 +127,30 @@ a {
   background-color: rgba(96, 85, 165, 0.9);
 }
 
+.input::-webkit-input-placeholder {
+  color: #3e3c49;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.input::-moz-placeholder {
+  color: #3e3c49;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.input:-ms-input-placeholder {
+  color: #3e3c49;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.input::-ms-input-placeholder {
+  color: #3e3c49;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
 .input::placeholder {
   color: #3e3c49;
   font-weight: bold;
@@ -149,6 +173,22 @@ a:hover {
   border: 3px solid #ff7a7a;
 }
 
+.error::-webkit-input-placeholder {
+  color: #ff7a7a;
+}
+
+.error::-moz-placeholder {
+  color: #ff7a7a;
+}
+
+.error:-ms-input-placeholder {
+  color: #ff7a7a;
+}
+
+.error::-ms-input-placeholder {
+  color: #ff7a7a;
+}
+
 .error::placeholder {
   color: #ff7a7a;
 }
@@ -158,20 +198,16 @@ a:hover {
 
 /* /////////MEDIA QUERIES //////*/
 
-@media (min-width: 575px) and (max-width: 690px) {
+@media (min-width: 575px) {
   .wrapper {
     width: 80%;
-  }
-}
-
-@media (min-width: 690px) and (max-width: 850px) {
-  .wrapper {
-    width: 70%;
+    max-width: 460px;
   }
 }
 
 @media (min-width: 850px) {
   .wrapper {
+    max-width: 1000px;
     flex-direction: row;
   }
 

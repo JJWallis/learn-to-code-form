@@ -1,7 +1,7 @@
-// 1. Re-factor 
 // 2. Exclamation symbol - position in relation to <fieldset> 
 // 3. Build on string validation - search 
 // 4. Regular expressions 
+// 5. Babel
 
 'use strict'
 
@@ -13,19 +13,16 @@ const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 
 form.addEventListener('submit', (e) => {
-    let inputsArr = document.querySelectorAll('input')
+    let inputs = document.querySelectorAll('input')
     let errorsArr = []
 
-    for (let i = 0; i < inputsArr.length; i++) {
-        if (inputsArr[i].value === '' || inputsArr[i].value === null) {
-            if (inputsArr[i].type === 'email') {
-                email.placeholder = 'Email@example.com'
-            }
-            errorsArr.push(inputsArr[i])
+    for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].value === '' || inputs[i].value === null) {
+            errorsArr.push(inputs[i])
         } else {
-            let nextSibling = inputsArr[i].nextElementSibling
+            let nextSibling = inputs[i].nextElementSibling
             nextSibling.classList.add('hidden')
-            inputsArr[i].classList.remove('error')
+            inputs[i].classList.remove('error')
         }
     } 
         
@@ -37,6 +34,10 @@ form.addEventListener('submit', (e) => {
             errorIcon.alt = 'Red error icon'
             errorIcon.className = 'error-icon'
             fieldset.insertBefore(errorIcon,errorsArr[i])
+        }
+        
+        if (errorsArr[i].type === 'email') {
+            email.placeholder = 'Email@example.com'
         }
         nextSibling.classList.remove('hidden')
         errorsArr[i].classList.add('error')
