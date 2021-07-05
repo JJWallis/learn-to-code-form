@@ -1,6 +1,6 @@
-// 3. Build on string validation - search 
-// 4. Regular expressions 
-// 5. Babel
+// 1. Regular expressions 
+// 2. Babel 
+// 3. Error msg on submit 
 
 'use strict'
 
@@ -10,6 +10,7 @@ const firstName = document.querySelector('#first-name')
 const lastName = document.querySelector('#last-name')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
+const phoneNumber = document.querySelector('#phone-number')
 
 form.addEventListener('submit', (e) => {
     let inputs = document.querySelectorAll('input')
@@ -23,6 +24,9 @@ form.addEventListener('submit', (e) => {
         } else if (password.value.toLowerCase() === 'password') {
             passwordNextElementSibling.textContent = 'Password cannot be password'
             errorsArr.push(password)
+        } else if (phoneNumber.value !== '') {
+            const numberFormatted = phoneNumber.value.replace(/[^0-9]/g,'')
+            phoneNumber.value = numberFormatted
         } else {
             let nextSibling = inputs[i].nextElementSibling
             nextSibling.classList.add('hidden')
