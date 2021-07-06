@@ -1,5 +1,5 @@
-// 1. Regular expressions 
-// 2. Babel 
+// 1. Babel 
+// 2. Regular expressions 
 
 'use strict'
 
@@ -10,15 +10,15 @@ const lastName = document.querySelector('#last-name')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 const phoneNumber = document.querySelector('#phone-number')
+const inputs = document.querySelectorAll('input')
 
-form.addEventListener('submit', (e) => {
-    let inputs = document.querySelectorAll('input')
+form.addEventListener('submit', e => {
     let errorsArr = []
 
     for (let i = 0; i < inputs.length; i++) {
         let passwordNextElementSibling = password.nextElementSibling
         if (inputs[i].value === '' || inputs[i].value === null) {
-            passwordNextElementSibling.textContent = 'Password cannot be empty'
+            inputs[i].nextElementSibling.textContent = `${inputs[i].placeholder} cannot be empty`
             errorsArr.push(inputs[i])
         } else if (password.value.toLowerCase() === 'password') {
             passwordNextElementSibling.textContent = 'Password cannot be password'
