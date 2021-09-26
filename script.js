@@ -1,6 +1,3 @@
-// 1. Babel 
-// 2. Regular expressions 
-
 'use strict'
 
 const form = document.querySelector('.form')
