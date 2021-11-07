@@ -34,7 +34,6 @@ Your users should be able to:
 
 ### Links
 
--  Solution URL:
 -  Live Site URL:
 
 ## My process
@@ -42,13 +41,9 @@ Your users should be able to:
 ### Built with
 
 -  Semantic HTML5 markup
--  CSS custom properties
 -  Flexbox
--  CSS Grid
 -  Mobile-first workflow
--  [React](https://reactjs.org/) - JS library
--  [Styled Components](https://styled-components.com/) - For styles
--  Sass - CSS preprocessor
+-  Vanilla JS
 
 ### What I learned
 
@@ -57,32 +52,69 @@ Your users should be able to:
 ```
 
 ```css
-.proud-of-this-css {
-   color: papayawhip;
+.btn-bg-purp {
+   box-shadow: 1px 7px 0px 0px rgba(0, 0, 0, 0.2);
+   /* achieved without help */
+}
+
+.input:not(:first-child) {
+   margin-top: 0.9em;
+   /* more practice with advanced pseudo-classes */
 }
 ```
 
 ```js
-const proudOfThisFunc = () => {
-   console.log('🎉')
+let errorsArr = []
+if (inputs[i].value === '' || inputs[i].value === null) {
+   inputs[
+      i
+   ].nextElementSibling.textContent = `${inputs[i].placeholder} cannot be empty`
+   errorsArr.push(inputs[i])
+   // dynamic placeholder + error arr
 }
+
+const numberFormatted = phoneNumber.value.replace(/[^0-9]/g, '') // 1st regex
+
+e.preventDefault() // 1st use
+
+const results = document.querySelector('.results')
+new URLSearchParams(window.location.search).forEach((n, v) => {
+   results.append(`${v}: ${n}`)
+   results.append(document.createElement('br'))
+}) // URL data - print like backend
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+later validation methods - libraries
 
 ### Useful resources
 
--  [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+-  [Javascript Form Validation](https://www.youtube.com/watch?v=In0nB0ABaUk&t=105s&ab_channel=WebDevSimplified) - This video was my introduction to client-side validation, and how all HTML inputs store data as strings which we can perform basic validation on using conditional statements.
 
 ## Author
 
 -  Website - [Joshua Jameson-Wallis](https://joshuajamesonwallis.com)
 -  Linkedin - [Joshua Jameson-Wallis]()
 
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
 ###### TODO
+
+HTML:
+
+Hard-coded error msg containers into DOM - not great for accessibility (append everything via JS in future)
+
+Fieldset - more accessible form (logical grouping)
+
+CSS:
+
+Progression from accordian - setting max-width later + content change breakpoint later too
+
+Opacity on hover for buttons + box-shadow style - completed without help
+
+JS:
+
+My first project with client-side validation | basic strings + conditionals vs JS Validity API | submit event listener on form only (on btn click - run validation via looping over all inputs) | next time check if falsy vs === '' || === null | Kyle vid - arr of inputs that recieve an error + if length > 0 - fails! (good use of data structures vs individual vars) | toLowerCase() - good converting data practice | next time - refactor massive event listener into 2 sep funcs
+
+Regex used for phone number (could next time use pre-built one) | use on fly for advanced find + replace - building ID's dynamically (do in later project - RSVP app)
+
+results.html - JS to take submitted form data + display as if backend | progression from GET requests + learning HTTP + how data sent in request | GET method so sent in url + use JS built in constructor to obtain + display | shows name / value pairs - how stored on backend + links directly with objs in front-end | shows why validation important - else data may not make sense/malicious
