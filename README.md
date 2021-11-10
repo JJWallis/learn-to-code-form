@@ -51,7 +51,7 @@ Your users should be able to:
 <div class="errorMsg hidden"></div>
 ```
 
-1st time building error msg (el) in JS + appending to DOM (textContent, classes) | Hard-coded error msg containers into DOM - not great for accessibility (append everything via JS in future)
+Considering this my first time building error messages in Javascript and appending them into the DOM, I decided to hardcode placeholder divs that would hold any message (text content) supplied to it. Although a `<div>` has no semantic meaning for assistive technologies, it would have been better to build the whole error element in Javascript and dynamically append it to whatever form input registered invalid data.
 
 ```css
 .btn-bg-purp {
