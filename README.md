@@ -85,14 +85,14 @@ if (inputs[i].value === '' || inputs[i].value === null) {
 }
 ```
 
-By far the most important concept I learned through this project was client-side validation.I learned that there are multiple methods to validating form data in Javascript, such as using traditional conditional statements or the Javascript Validity API, which provides built in methods and properties to achieve the same logic in perhaps a more readable manner.All of this validation can be nicely setup to execute on a 'submit' event, which only occurs on the parent <form> when a submit button is clicked on. Once clicked I ran a loop over all the inputs and first checked to see whether they were not empty, in order to continue running more specific validation for certain input types.
+By far the most important concept I learned through this project was client-side validation.I learned that there are multiple methods to validating form data in Javascript, such as using traditional conditional statements or the Javascript Validity API, which provides built in methods and properties to achieve the same logic in perhaps a more readable manner.All of this validation can be nicely setup to execute on a 'submit' event, which only occurs on the parent `<form>` when a submit button is clicked on. Once clicked I ran a loop over all the inputs and first checked to see whether they were not empty, in order to continue running more specific validation for certain input types.
 
 ```js
 const numberFormatted = phoneNumber.value.replace(/[^0-9]/g, '')
-e.preventDefault() // 1st use
+e.preventDefault()
 ```
 
-Regex used for phone number (could next time use pre-built one) | use on fly for advanced find + replace - building ID's dynamically (do in later project - RSVP app)
+An example of this unique validation was using a regular expression to replace all potential letters within the users submitted phone number. This was of course really important because sending incorrectly typed data to a backend server can cause serious problems if it's not setup to deal with that correctly. However, thankfully the bulk of data validation occurs at the backend because client-side Javascript is very easy to bypass by simply disabling it in your browser. In future projects, it may be worth using a pre-coded regular expression for certain data formats, since form validation is something which almost every project heaviy relies on, and has therefore been robustly solved through mutiple means already.
 
 ```js
 const results = document.querySelector('.results')
@@ -102,7 +102,9 @@ new URLSearchParams(window.location.search).forEach((n, v) => {
 })
 ```
 
-results.html - JS to take submitted form data + display as if backend | progression from GET requests + learning HTTP + how data sent in request | GET method so sent in url + use JS built in constructor to obtain + display | shows name / value pairs - how stored on backend + links directly with objs in front-end | shows why validation important - else data may not make sense/malicious
+The last major concept I learned about was ...
+
+results.html - JS to take submitted form data + display as if backend | progression from GET requests + learning HTTP + how data sent in request | GET method so sent in url + use JS built in constructor to obtain + display | shows name / value pairs - how stored on backend + links directly with objs in front-end
 
 ### Continued development
 
@@ -114,7 +116,7 @@ Refactoring massive event listeners
 
 ### Useful resources
 
--  [Javascript Form Validation](https://www.youtube.com/watch?v=In0nB0ABaUk&t=105s&ab_channel=WebDevSimplified) - This video was my introduction to client-side validation, and how all HTML inputs store data as strings which we can perform basic validation on using conditional statements. Kyle vid - arr of inputs that recieve an error + if length > 0 - fails! (good use of data structures vs individual vars) |
+-  [Javascript Form Validation](https://www.youtube.com/watch?v=In0nB0ABaUk&t=105s&ab_channel=WebDevSimplified) - This video was my introduction to client-side validation, and how all HTML inputs store data as strings which we can perform basic conditional validation on. Kyle's solution also allowed me to practice using data structures alongside our validation, specifically declaring an empty array that would receive any inputs reporting invalid data. If the length of that array was greater than zero, the submission would fail.
 
 ## Author
 
