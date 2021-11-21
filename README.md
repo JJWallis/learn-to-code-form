@@ -14,7 +14,6 @@ This is a solution to the [Intro component with sign-up form challenge](https://
    -  [Continued development](#continued-development)
    -  [Useful resources](#useful-resources)
 -  [Author](#author)
--  [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -51,7 +50,7 @@ Your users should be able to:
 <div class="errorMsg hidden"></div>
 ```
 
-Considering this my first time building error messages in Javascript and appending them into the DOM, I decided to hardcode placeholder divs that would hold any message (text content) supplied to it. Although a `<div>` has no semantic meaning for assistive technologies, it would have been better to build the whole error element in Javascript and dynamically append it to whatever form input registered invalid data.
+Considering this was my first time building error messages in Javascript and appending them into the DOM, I decided to hardcode a placeholder <div> to print each message for its corresponding input. Although a <div> has no semantic meaning to interrupt assistive technologies, it would have been better to build the whole error component in Javascript and dynamically append it to whatever form input registered invalid data. I also won't be using camel case class names in the future, as that naming convention should be strictly kept within Javascript.
 
 ```css
 .btn-bg-purp {
@@ -63,9 +62,9 @@ Considering this my first time building error messages in Javascript and appendi
 }
 ```
 
-Opacity on hover for buttons + box-shadow style - completed without help
+I was proud of my ability to adjust the opacity of the buttons on hover, and successfully re-create the box-shadow style according to the original design, without having to research how to create both effects.
 
-More practice with advanced pseudo-classes
+This project also provided a great means for using more advanced pseudo-classes which, in this particular instance, were used to create spacing between the inputs except the first-child to avoid loosing the top-alignment. I have recently learnt that there is a common utility class titled the 'Lobotomised Owl' that achieves this same spacing effect, but it uses a universal selector to be more dynamic in targeting the desired markup. This will definitely be a class that I re-use in future projects, as this design technique is very commonly used when you focus on searching for it.
 
 ```css
 .wrapper {
@@ -120,7 +119,3 @@ Design techniques - tablet (in-between mobile max-width + wider row - often too 
 
 -  Website - [Joshua Jameson-Wallis](https://joshuajamesonwallis.com)
 -  Linkedin - [Joshua Jameson-Wallis]()
-
-Testing, testing, testing
-
-Testing, testing, testing
