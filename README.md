@@ -102,17 +102,11 @@ new URLSearchParams(window.location.search).forEach((n, v) => {
 })
 ```
 
-The last major concept I learned about was ...
-
-results.html - JS to take submitted form data + display as if backend | progression from GET requests + learning HTTP + how data sent in request | GET method so sent in url + use JS built in constructor to obtain + display | shows name / value pairs - how stored on backend + links directly with objs in front-end
+The last major concept I learned about was taking the user's submitted data once validated and displaying it on a separate page in a similar format to how it would be stored on a server. This technique, using the built in `URLSearchParams()` constructor function, really helped me to distinguish the difference between sending data via a GET request vs a POST request (the default method for form submission). The data is appended as name/value pairs within the query string of the request, which therefore has very limited security but for practice we can use Javascript to extract that information and do what we like.
 
 ### Continued development
 
-later validation methods - libraries + regex (the one used here is copied from Treehouse course - when learning about classes + setter methods)
-
-Design techniques - tablet (in-between mobile max-width + wider row - often too squished if do too soon)
-
-Refactoring massive event listeners
+Beyond this project, I would like to learn more about other validation methods such as using external libraries to handle all the heavy lifting, whilst allowing us to focus more on other aspects of the project which need to be built in a more custom manner. Additionally, I think having a greater focus on refactoring bulky code, especially within event listeners, would go a long way to producing more readable code in the event of adding future features.
 
 ### Useful resources
 
