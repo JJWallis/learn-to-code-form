@@ -82,11 +82,10 @@ if (inputs[i].value === '' || inputs[i].value === null) {
       i
    ].nextElementSibling.textContent = `${inputs[i].placeholder} cannot be empty`
    errorsArr.push(inputs[i])
-   // dynamic placeholder + error arr
 }
 ```
 
-My first project with client-side validation | basic strings + conditionals vs JS Validity API | submit event listener on form only (on btn click - run validation via looping over all inputs) | next time check if falsy vs === '' || === null | toLowerCase() - good converting data practice | next time - refactor massive event listener into 2 sep funcs
+By far the most important concept I learned through this project was client-side validation.I learned that there are multiple methods to validating form data in Javascript, such as using traditional conditional statements or the Javascript Validity API, which provides built in methods and properties to achieve the same logic in perhaps a more readable manner.All of this validation can be nicely setup to execute on a 'submit' event, which only occurs on the parent <form> when a submit button is clicked on. Once clicked I ran a loop over all the inputs and first checked to see whether they were not empty, in order to continue running more specific validation for certain input types.
 
 ```js
 const numberFormatted = phoneNumber.value.replace(/[^0-9]/g, '')
@@ -110,6 +109,8 @@ results.html - JS to take submitted form data + display as if backend | progress
 later validation methods - libraries + regex (the one used here is copied from Treehouse course - when learning about classes + setter methods)
 
 Design techniques - tablet (in-between mobile max-width + wider row - often too squished if do too soon)
+
+Refactoring massive event listeners
 
 ### Useful resources
 
