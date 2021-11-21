@@ -50,7 +50,7 @@ Your users should be able to:
 <div class="errorMsg hidden"></div>
 ```
 
-Considering this was my first time building error messages in Javascript and appending them into the DOM, I decided to hardcode a placeholder <div> to print each message for its corresponding input. Although a <div> has no semantic meaning to interrupt assistive technologies, it would have been better to build the whole error component in Javascript and dynamically append it to whatever form input registered invalid data. I also won't be using camel case class names in the future, as that naming convention should be strictly kept within Javascript.
+Considering this was my first time building error messages in Javascript and appending them into the DOM, I decided to hardcode a placeholder `<div>` to print each message for its corresponding input. Although a `<div>` has no semantic meaning to interrupt assistive technologies, it would have been better to build the whole error component in Javascript and dynamically append it to whatever form input registered invalid data. I also won't be using camel case class names in the future, as that naming convention should be strictly kept within Javascript.
 
 ```css
 .btn-bg-purp {
