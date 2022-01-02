@@ -40,8 +40,8 @@ Your users should be able to:
 ### Built with
 
 -  Semantic HTML5 markup
--  Flexbox
 -  Mobile-first workflow
+-  Flexbox
 -  Vanilla JS
 
 ### What I learned
@@ -64,7 +64,7 @@ Considering this was my first time building error messages in JavaScript and app
 
 I was proud of my ability to adjust the opacity of the buttons on hover, and successfully re-create the box-shadow style according to the original design, without having to research how to create both effects.
 
-This project also provided a great means for using more advanced pseudo-classes which, in this particular instance, were used to create spacing between the inputs except the first-child to avoid loosing the top-alignment. I have recently learnt that there is a common utility class titled the 'Lobotomised Owl' that achieves this same spacing effect, but it uses a universal selector to be more dynamic in targeting the desired markup. This will definitely be a class that I re-use in future projects, as this design technique is very commonly used.
+This project also provided a great means for using more advanced pseudo-classes which, in this particular instance, were used to create spacing between the inputs except the first-child to avoid loosing the top-alignment. I have recently learnt that there is a common utility class titled the 'Lobotomised Owl' that achieves this same spacing effect, but it uses a universal selector to be more dynamic in targeting the desired children's markup. This will definitely be a class that I reuse in future projects, as the concept of alignment is one of the most fundamental features of good design.
 
 ```css
 .wrapper {
@@ -73,7 +73,7 @@ This project also provided a great means for using more advanced pseudo-classes 
 }
 ```
 
-Following on from my previous project, I was able to set a more appropiate max-width which didn't change into a desktop design until a later viewport width of 974px. Although there was clearly a lot of margin either side of the centred and vertically aligned card, it was necessary for the design to change at that width else it would have looked too narrow at a horizontal layout beforehand.
+Following on from my previous project, I was able to set a more appropiate max-width which didn't change into a desktop design until a later viewport width of 974px. Although there was clearly a lot of margin either side of the centred and vertically aligned card, it was necessary for the design to change at that width, else it would have looked too narrow at the previous horizontal layout.
 
 ```js
 let errorsArr = []
@@ -92,7 +92,7 @@ const numberFormatted = phoneNumber.value.replace(/[^0-9]/g, '')
 e.preventDefault()
 ```
 
-An example of this unique validation was using a regular expression to replace all potential letters within the user's submitted phone number. This was of course really important because sending incorrectly typed data to a backend server can cause serious problems if it's not setup to deal with that correctly. However, thankfully the bulk of data validation occurs at the backend because client-side JavaScript is very easy to bypass by simply disabling it in your browser. In future projects, it may be worth using a pre-coded regular expression for certain data formats, since form validation is something which almost every project utilises, and has therefore been robustly solved through mutiple means already.
+An example of this unique validation was using a regular expression to replace all potential letters within the user's submitted phone number. This was of course really important because sending incorrectly typed data to a backend server can cause serious problems if it's not setup to deal with that correctly. However, thankfully the bulk of data validation occurs at the backend because client-side JavaScript is very easy to bypass by simply disabling it in your browser. In future projects, it may be worth using a pre-coded regular expression for certain data formats, since form validation is something which almost every project utilises, and has therefore been robustly implemented through mutiple means already.
 
 ```js
 const results = document.querySelector('.results')
@@ -102,7 +102,7 @@ new URLSearchParams(window.location.search).forEach((n, v) => {
 })
 ```
 
-The last major concept I learned about was taking the user's submitted data once validated and displaying it on a separate page in a similar format to how it would be stored on a server. This technique, using the built in `URLSearchParams()` constructor function, really helped me to distinguish the difference between sending data via a GET request vs a POST request (the default method for form submission). The data is appended as name/value pairs within the query string of the request, which therefore has very limited security but for practice we can use client-side JavaScript to extract that information and do what we like.
+The last major concept I learned about was taking the user's submitted data once validated, and displaying it on a separate page in a similar format to how it would be stored on a server. This technique, using the built in `URLSearchParams()` constructor function, really helped me to distinguish the difference between sending data via a GET request vs a POST request (the default method for form submission). The data is appended as name/value pairs within the query string of the request, which therefore has very limited security but for practice we can use client-side JavaScript to extract that information and do what we like.
 
 ### Continued development
 
@@ -112,9 +112,9 @@ Additionally, I think having a greater focus on refactoring bulky code, especial
 
 ### Useful resources
 
--  [Javascript Form Validation](https://www.youtube.com/watch?v=In0nB0ABaUk&t=105s&ab_channel=WebDevSimplified) - This video was my introduction to client-side validation, and how all HTML inputs store data as strings which we can perform basic conditional validation on. Kyle's solution also allowed me to practice using data structures alongside our validation, specifically declaring an empty array that would receive any inputs reporting invalid data. If the length of that array was greater than zero, the submission would fail.
+-  [Javascript Form Validation](https://www.youtube.com/watch?v=In0nB0ABaUk&t=105s&ab_channel=WebDevSimplified) - This video was my introduction to client-side validation, and how all HTML inputs store data as strings which we can perform basic conditional validation on. Kyle's solution also allowed me to practice using data structures alongside our validation, specifically declaring an empty array that would receive any inputs reporting invalid data. If the length of that array was greater than zero, then the submission would fail.
 
 ## Author
 
 -  Website - [Joshua Jameson-Wallis](https://joshuajamesonwallis.com)
--  Linkedin - [Joshua Jameson-Wallis]()
+-  Linkedin - [Joshua Jameson-Wallis](https://www.linkedin.com/in/joshua-jameson-wallis/)
