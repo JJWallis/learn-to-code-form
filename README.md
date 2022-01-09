@@ -106,17 +106,15 @@ new URLSearchParams(window.location.search).forEach((n, v) => {
 })
 ```
 
-The last major concept I learned about was taking the user's submitted data once validated, and displaying it on a separate page in a similar format to how it would be stored on a server. This technique, using the built in `URLSearchParams()` constructor function, really helped me to distinguish the difference between sending data via a GET request vs a POST request (the default method for form submission). The data is appended as name/value pairs within the query string of the request, which therefore has very limited security but for practice we can use client-side JavaScript to extract that information and do what we like.
+The last major concept I learned about was taking the user's submitted data once validated and displaying it on a separate page in a similar format to how it would be stored on a server. This helped me distinguish between sending data through a GET and POST request, the default method used for form submission. The data is appended as name/value pairs within the query string of the request, therefore having very limited security since we can directly see the inputted data within the URL.
 
 ### Continued development
 
-Beyond this project, I would like to learn more about other validation methods such as using external libraries to handle all the heavy lifting, whilst allowing us to focus more on other aspects of the project which need to be built in a more custom manner.
-
-Additionally, I think having a greater focus on refactoring bulky code, especially within event listeners, would go a long way to producing more readable code in the event of adding future features.
+I would like to learn more about other validation methods such as using external libraries to handle all the heavy lifting, whilst allowing us to focus more on other aspects of the project which need to be built in a more custom manner.
 
 ### Useful resources
 
--  [Javascript Form Validation](https://www.youtube.com/watch?v=In0nB0ABaUk&t=105s&ab_channel=WebDevSimplified) - This video was my introduction to client-side validation, and how all HTML inputs store data as strings which we can perform basic conditional validation on. Kyle's solution also allowed me to practice using data structures alongside our validation, specifically declaring an empty array that would receive any inputs reporting invalid data. If the length of that array was greater than zero, then the submission would fail.
+-  [Javascript Form Validation](https://www.youtube.com/watch?v=In0nB0ABaUk&t=105s&ab_channel=WebDevSimplified) - This video was my introduction to client-side validation and how all HTML inputs store data as strings which we can perform basic conditional checks on.
 
 ## Author
 
