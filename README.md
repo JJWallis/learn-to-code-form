@@ -64,7 +64,7 @@ Considering this was my first time building and appending error messages in Java
 
 I was proud of my ability to adjust the opacity of the buttons on hover and successfully re-create the box-shadow style according to the original design, without having to firstly conduct any research.
 
-This project also provided a great means for using more advanced pseudo-classes which, in this particular instance, were used to create spacing between the inputs except the first-child to avoid loosing the top-alignment. I have recently learnt that there is a common utility class titled the 'Lobotomised Owl' that achieves this same spacing effect, but it uses a universal selector to be more dynamic in targeting the desired children's markup. This will definitely be a class that I reuse in future projects, as the concept of alignment is one of the most fundamental features of good design.
+This project also provided a great means for using more advanced pseudo-classes which were used to create spacing between the inputs, except the first-child to avoid loosing the top-alignment. I have recently learnt that there is a common utility class titled the 'Lobotomised Owl' that achieves this same spacing effect, but it uses a universal selector to be more dynamic in targeting the desired children's markup. This will definitely be a class that I reuse in future projects, as the concept of alignment is one of the most fundamental features of good design.
 
 ```css
 .wrapper {
@@ -73,7 +73,7 @@ This project also provided a great means for using more advanced pseudo-classes 
 }
 ```
 
-Following on from my previous project, I was able to set a more appropiate max-width which didn't change into a desktop design until a later viewport width of 974px. Although there was clearly a lot of margin either side of the centred and vertically aligned card, it was necessary for the design to change at that width, else it would have looked too narrow at the previous horizontal layout.
+Following on from my previous project, I was able to set a more appropiate max-width which didn't change into a desktop design until a later viewport width of 974px. Although there was clearly a lot of margin either side of the centered and vertically aligned card, it was necessary for the design to change at that width or it would have looked too narrow at the previous horizontal layout.
 
 ```js
 let errorsArr = []
