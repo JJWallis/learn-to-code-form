@@ -50,7 +50,7 @@ Your users should be able to:
 <div class="errorMsg hidden"></div>
 ```
 
-Considering this was my first time building error messages in JavaScript and appending them into the DOM, I decided to hardcode a placeholder `<div>` to print each message for its corresponding input. Although a `<div>` has no semantic meaning to interrupt assistive technologies, it would have been better to build the whole error component in JavaScript and dynamically append it to whatever form input registered invalid data. I also won't be using Camel case class names in the future, as that naming convention should be strictly kept within Javascript.
+Considering this was my first time building and appending error messages in JavaScript into the DOM, I decided to hardcode a placeholder `<div>` to print each message for its corresponding input. Although a `<div>` has no semantic meaning to interrupt assistive technologies, it would have been better to build the whole error component in JavaScript and dynamically append it to whatever form input registered invalid data. I also won't be using Camel case class names as that naming convention should be strictly kept within Javascript.
 
 ```css
 .btn-bg-purp {
@@ -62,7 +62,7 @@ Considering this was my first time building error messages in JavaScript and app
 }
 ```
 
-I was proud of my ability to adjust the opacity of the buttons on hover, and successfully re-create the box-shadow style according to the original design, without having to research how to create both effects.
+I was proud of my ability to adjust the opacity of the buttons on hover and successfully re-create the box-shadow style according to the original design, without having to firstly conduct any research.
 
 This project also provided a great means for using more advanced pseudo-classes which, in this particular instance, were used to create spacing between the inputs except the first-child to avoid loosing the top-alignment. I have recently learnt that there is a common utility class titled the 'Lobotomised Owl' that achieves this same spacing effect, but it uses a universal selector to be more dynamic in targeting the desired children's markup. This will definitely be a class that I reuse in future projects, as the concept of alignment is one of the most fundamental features of good design.
 
