@@ -85,7 +85,9 @@ if (inputs[i].value === '' || inputs[i].value === null) {
 }
 ```
 
-By far the most important concept I learned through this project was client-side validation. I learned that there are multiple methods to validating form data in JavaScript, such as using traditional conditional statements or the JavaScript Validity API, which provides built in methods and properties to achieve the same logic in perhaps a more readable manner. All of this validation can be nicely setup to execute on a submit event, which only occurs on the parent `<form>` when a submit button is clicked on. Once that event was fired, I ran a loop over all the inputs and first checked to see whether they were not empty, in order to continue running more specific validation for certain input types.
+By far the most important concept I learned through this project was client-side validation. I learned that there are multiple methods to validating form data in JavaScript, such as using traditional conditional statements or the JavaScript Validity API, which provides built in methods and properties to achieve the same logic in perhaps a more readable manner.
+
+All of this validation can be nicely setup to execute on a submit event which only occurs on the parent `<form>` when a submit button is clicked on. Once that event was fired, I ran a loop over all the inputs to first check whether they weren't empty, in order to continue running more specific validation checks for certain inputs.
 
 ```js
 const numberFormatted = phoneNumber.value.replace(/[^0-9]/g, '')
